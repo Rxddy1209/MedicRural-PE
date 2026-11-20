@@ -1,8 +1,6 @@
 [INSTRUCCIONES.md](https://github.com/user-attachments/files/35127623/INSTRUCCIONES.md)
 # Documentación y evidencias
 
-Coloca aquí el diagrama UML exportado desde draw.io con el nombre `diagrama_uml.png`.
-
 En `evidencias/` guarda capturas reales de:
 - Menú principal.
 - Inventario completo.
