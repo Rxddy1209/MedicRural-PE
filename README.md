@@ -1,101 +1,129 @@
 # MedicRural-PE
 
-Sistema académico de consola desarrollado en Python para administrar el inventario de medicamentos e insumos médicos de establecimientos de salud rurales.
+### Sistema de gestión de inventario de medicamentos e insumos médicos
 
-## Objetivo
+## 1. Introducción
 
-Registrar productos, actualizar cantidades, controlar entradas y salidas, identificar stock bajo o agotado y generar reportes de inventario.
+MedicRural-PE es un proyecto académico desarrollado en Python que busca facilitar la gestión y el control de medicamentos e insumos médicos en establecimientos de salud rurales del Perú.
 
-> Los datos incluidos son ficticios y se utilizan únicamente con fines académicos. Los criterios de riesgo son demostrativos y no representan una evaluación sanitaria validada.
+El sistema permite registrar medicamentos, consultar las cantidades disponibles, actualizar el inventario y controlar las entradas y salidas de productos. También permite identificar medicamentos con stock bajo y próximos a vencer.
 
-## Requisitos
+El proyecto aplica diferentes conceptos de programación, como la programación orientada a objetos, programación estructurada y programación funcional. Además, utiliza archivos JSON para almacenar la información del inventario.
 
-- Python 3.10 o superior
-- Git
-- Visual Studio Code (recomendado)
+## 2. Objetivo general
 
-## Instalación y ejecución
+Desarrollar un sistema que permita gestionar el inventario de medicamentos e insumos médicos, facilitando el control de existencias y la identificación de posibles situaciones de desabastecimiento en establecimientos de salud rurales.
 
-1. Descarga o clona este repositorio.
-2. Abre la carpeta del proyecto en Visual Studio Code.
-3. (Opcional) Crea un entorno virtual:
+## 3. Objetivos específicos
 
-   ```bash
-   python -m venv .venv
-   ```
+- Registrar medicamentos e insumos médicos.
+- Consultar los productos disponibles.
+- Actualizar las cantidades del inventario.
+- Registrar entradas y salidas de productos.
+- Identificar medicamentos con stock bajo.
+- Detectar medicamentos próximos a vencer.
+- Generar reportes del inventario.
 
-4. Activa el entorno virtual en Windows:
+## 4. Funcionalidades principales
 
-   ```powershell
-   .venv\Scripts\Activate.ps1
-   ```
+- Registro de medicamentos.
+- Consulta del inventario.
+- Actualización de existencias.
+- Registro de entradas y salidas.
+- Identificación de productos agotados o con stock bajo.
+- Detección de medicamentos próximos a vencer.
+- Generación de reportes generales.
 
-5. Instala las dependencias:
+## 5. Tecnologías utilizadas
 
-   ```bash
-   pip install -r requirements.txt
-   ```
+- Python 3.x
+- JSON para el almacenamiento de información.
+- Visual Studio Code como entorno de desarrollo.
+- Git y GitHub para el control de versiones.
+- pytest para las pruebas automatizadas.
 
-6. Ejecuta el programa:
-
-   ```bash
-   python main.py
-   ```
-
-## Funciones del sistema
-
-1. Registrar medicamentos e insumos.
-2. Consultar el inventario.
-3. Modificar el stock total de un producto.
-4. Registrar entradas.
-5. Registrar salidas, verificando que exista cantidad suficiente.
-6. Consultar productos con stock bajo o agotado.
-7. Identificar productos próximos a vencer (30 días).
-8. Generar un reporte general.
-
-## Estados del stock
-
-- **NORMAL:** stock superior al mínimo.
-- **STOCK BAJO:** stock mayor que cero e igual o inferior al mínimo.
-- **AGOTADO:** stock igual a cero.
-
-## Paradigmas y conceptos aplicados
-
-- **Orientado a objetos:** clases `Medicamento`, `Establecimiento`, `Movimiento`, `GestorInventario` y `Reporte`.
-- **Funcional:** `filter()` y `map()` para consultar y transformar colecciones.
-- **Estructurado:** menú, condicionales, ciclos y validaciones.
-- **Patrones:** Factory para crear productos y Singleton para el gestor.
-- **Persistencia:** archivo `medicamentos.json`.
-- **Excepciones:** control de datos inválidos, productos inexistentes y salidas superiores al stock.
-
-## Pruebas
-
-Instala pytest y ejecuta:
-
-```bash
-pytest -v
-```
-
-## Estructura
+## 6. Estructura del proyecto
 
 ```text
 MedicRural-PE/
+│
 ├── main.py
 ├── medicamentos.json
 ├── requirements.txt
 ├── README.md
 ├── .gitignore
-├── tests/
-│   └── test_inventario.py
+│
 ├── docs/
-│   └── diagrama_uml.png
+│   ├── diagrama_uml.png
+│
 └── evidencias/
     ├── ejecucion.png
     └── pruebas.png
 ```
 
-Las carpetas `docs/` y `evidencias/` pueden completarse con el diagrama UML y capturas reales del funcionamiento.
+## 7. Instalación y ejecución
 
-## Alcance y limitaciones
+### Requisitos previos
 
-Es un prototipo local de consola. No incluye autenticación, sincronización entre establecimientos ni conexión con proveedores. No debe utilizarse para gestionar inventarios clínicos reales sin validación, controles de seguridad y revisión del personal responsable.
+- Tener instalado Python 3.x.
+- Contar con Visual Studio Code.
+- Tener instalado pytest.
+
+### Instalar pytest
+
+```bash
+python -m pip install pytest
+```
+
+### Ejecutar el programa
+
+```bash
+python main.py
+```
+
+### Ejecutar las pruebas automatizadas
+
+```bash
+python -m pytest -v
+```
+
+## 8. Conceptos de programación aplicados
+
+### Programación orientada a objetos
+
+Se utilizan clases y objetos para representar los medicamentos, establecimientos, movimientos y la gestión del inventario.
+
+### Programación estructurada
+
+Se emplean funciones, condicionales y estructuras repetitivas para organizar el funcionamiento del sistema.
+
+### Programación funcional
+
+Se utilizan funciones como `filter()` y `map()` para procesar y consultar información del inventario.
+
+### Manejo de excepciones
+
+Se realizan validaciones para evitar operaciones incorrectas, como registrar cantidades negativas o retirar más productos de los disponibles.
+
+## 9. Pruebas automatizadas
+
+El proyecto utiliza pytest para comprobar el funcionamiento de diferentes operaciones del inventario, como la creación de medicamentos, actualización del stock, registro de entradas y salidas y detección de stock bajo.
+
+Las pruebas se encuentran en la carpeta `tests`.
+
+## 10. Alcance del proyecto
+
+MedicRural-PE es un prototipo académico que funciona mediante una interfaz de consola. Su finalidad es demostrar la aplicación de conceptos de programación en la gestión de inventarios de establecimientos de salud rurales.
+
+El sistema utiliza datos de ejemplo y no está conectado a una plataforma médica real.
+
+## 11. Integrantes del equipo
+
+- Mateo Oroche
+- Leonel Morales
+- Ruddy Raraz
+- Valentino Pomalaya
+
+## 12. Proyecto académico
+
+Desarrollado como parte de las actividades académicas de Ingeniería de Sistemas.
