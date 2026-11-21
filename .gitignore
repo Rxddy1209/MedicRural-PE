@@ -1,7 +1,21 @@
-__pycache__/
-*.py[cod]
-.pytest_cache/
-.venv/
-venv/
-.env
+# NetBeans
+/nbproject/private/
+/build/
+/dist/
+/nbdist/
+/nbactions.xml
+
+# Maven
+/target/
+
+# Archivos temporales
+*.log
+*.class
+
+# Configuración local
+.idea/
+.vscode/
+
+# Sistema operativo
 .DS_Store
+Thumbs.db
